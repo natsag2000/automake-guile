@@ -1,0 +1,9 @@
+This is a simple test creating sample project with GNU Tools (Automake, Autoconf ...).
+For the practice purpose, the example on the http://www.gnu.org/software/guile/docs/guile-tut/tutorial.html is chosen.
+
+* Compile and testing
+
+./config/bootstrap
+./configure && make
+./src/mytortoise
+
