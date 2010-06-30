@@ -1,0 +1,11 @@
+#!/bin/sh
+#aclocal.m4 erstellen
+aclocal -I config
+#config.h.in aus configure.in erstellen
+autoheader
+# aus makefiles.am Makefile.in gererieren und einige
+# zusaetzliche Tools in das Verzeichnis kopieren
+# ("--add-missing --copy" bewirkt letzteres)
+automake --add-missing --copy
+# schlussendlich aus configure.in das configure-Script erstellen
+autoconf

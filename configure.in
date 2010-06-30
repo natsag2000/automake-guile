@@ -1,0 +1,28 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.64])
+AC_INIT([powerGuile], [0.1.0], [nagi@test])
+AC_CONFIG_AUX_DIR(config)
+AC_CONFIG_SRCDIR([config.h.in])
+AM_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE
+
+LIBS="$LIBS -L/usr/lib -lX11 -lm"
+INCLUDES="$INCLUDES -I/usr/include"
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+# Checks for libraries.
+
+# Checks for header files.
+AC_PATH_X
+AC_CHECK_HEADERS([X11/Xlib.h math.h])
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 src/Makefile])
+AC_OUTPUT
